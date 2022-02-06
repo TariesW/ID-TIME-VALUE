@@ -1,0 +1,82 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf840
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23080\viewh12560\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 > # thresholds / 17 initial values\
+> mthresh <- lcmm(value~time, random=~time, mixture=~time, subject = "id", ng=2, data=dataset, link = "thresholds",maxiter=100 ,B=c(0.55660514,2.21480880,0.18323697,0.01515984,6.59269865,0.91420773,2.07026450,-5.78629796,0.57597657,0.94385277,0.04478981,0.08538294,0.16276637,7.12224231,0.84318895,0,0))\
+Be patient, lcmm is running ... \
+The program took 27759.67 seconds \
+> summary(mthresh)\
+General latent class mixed model \
+     fitted by maximum likelihood method \
+ \
+lcmm(fixed = value ~ time, mixture = ~time, random = ~time, subject = "id", \
+    ng = 2, link = "thresholds", data = dataset, maxiter = 100)\
+ \
+Statistical Model: \
+     Dataset: dataset \
+     Number of subjects: 480 \
+     Number of observations: 1297 \
+     Number of latent classes: 2 \
+     Number of parameters: 17  \
+     Link function: thresholds  \
+ \
+Iteration process: \
+     Maximum number of iteration reached without convergence \
+     Number of iterations:  100 \
+     Convergence criteria: parameters= 0.016 \
+                         : likelihood= 0.0012 \
+                         : second derivatives= 1 \
+ \
+Goodness-of-fit statistics: \
+     maximum log-likelihood: -286190.81  \
+     AIC: 572415.61  \
+     BIC: 572486.57  \
+ \
+     Discrete posterior log-likelihood: -286190.81  \
+     Discrete AIC: 572415.61  \
+ \
+     Mean discrete AIC per subject: 596.2663  \
+     Mean UACV per subject: 14102.79  \
+     Mean discrete LL per subject: -596.2308  \
+ \
+Maximum Likelihood Estimates: \
+ \
+Fixed effects in the class-membership model:\
+(the class of reference is the last class) \
+\
+                      coef Se Wald p-value\
+intercept class1   0.45645                \
+\
+Fixed effects in the longitudinal model:\
+\
+                                      coef Se Wald p-value\
+intercept class1 (not estimated)         0                \
+intercept class2                   0.48386                \
+time class1                        0.15935                \
+time class2                        1.03871                \
+\
+\
+Variance-covariance matrix of the random-effects:\
+          intercept  time\
+intercept  20.15722      \
+time        1.53572 0.117\
+\
+Residual standard error (not estimated) = 1\
+\
+Parameters of the link function:\
+\
+                    coef Se Wald p-value\
+thresh. parm1  -10.45652                \
+thresh. parm2    2.33676                \
+thresh. parm3    1.02855                \
+thresh. parm4    1.25189                \
+thresh. parm5    1.25799                \
+thresh. parm6    1.41901                \
+thresh. parm7    7.12224                \
+thresh. parm8    0.84319                \
+thresh. parm9    0.00000                \
+thresh. parm10   0.00000  }
